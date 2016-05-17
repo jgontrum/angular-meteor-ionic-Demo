@@ -10,22 +10,22 @@ export class RoutesConfig extends Config {
 
     configure() {
         this.$stateProvider
-            .state('tab', {
-                url: '/tab',
+            .state('app', {
+                url: '/app',
                 abstract: true,
-                templateUrl: 'client/components/tabs/tabs.html'
+                templateUrl: 'client/components/sidemenu/sidemenu.html'
             })
-            .state('tab.content', {
+            .state('app.content', {
                 url: '/content',
                 views: {
-                    'tab-content': {
+                    'menu-content': {
                         templateUrl: 'client/components/content/content.html',
                         controller: 'ContentCtrl as content',
                     }
                 }
             });
 
-        this.$urlRouterProvider.otherwise('tab/content');
+        this.$urlRouterProvider.otherwise('app/content');
     }
 
     isAuthorized($auth) {
