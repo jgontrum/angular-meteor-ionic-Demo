@@ -1,4 +1,4 @@
-# Basic App (Tabs)
+# Basic App (Sidemenu)
 
 This repository contains the required code to run a very basic mobile web app with Meteor, Angular and Ionic.
 
