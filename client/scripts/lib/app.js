@@ -7,7 +7,7 @@ import 'angular-ui-router';
 
 // Modules
 import Definer from '../definer';
-import SidemenuCtrl from '../../components/sidemenu/sidemenu.controller';
+import TabsCtrl from '../../components/tabs/tabs.controller';
 import ContentCtrl from '../../components/content/content.controller';
 
 import {
@@ -23,7 +23,7 @@ const App = angular.module('App', [
 ]);
 
 new Definer(App)
-    .define(SidemenuCtrl)
+    .define(TabsCtrl)
     .define(ContentCtrl)
     .define(RoutesConfig)
     .define(RoutesRunner);

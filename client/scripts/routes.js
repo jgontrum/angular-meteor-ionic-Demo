@@ -15,13 +15,13 @@ export class RoutesConfig extends Config {
             .state('app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: 'client/components/sidemenu/sidemenu.html',
-                controller: 'SidemenuCtrl as sidemenu'
+                templateUrl: 'client/components/tabs/tabs.html',
+                controller: 'TabsCtrl as tabs'
             })
             .state('app.content', {
                 url: '/content',
                 views: {
-                    'menu-content': {
+                    'tab-one': {
                         templateUrl: 'client/components/content/content.html',
                         controller: 'ContentCtrl as content'
                     }

@@ -6,14 +6,12 @@ import {
     Meteor
 } from 'meteor/meteor';
 
-export default class SidemenuCtrl extends Controller {
+
+export default class TabsCtrl extends Controller {
     constructor() {
         super(...arguments);
 
-        this.helpers({
-
-        });
     }
 }
 
-SidemenuCtrl.$inject = ['$scope', '$state'];
+TabsCtrl.$inject = ['$scope', '$state'];
