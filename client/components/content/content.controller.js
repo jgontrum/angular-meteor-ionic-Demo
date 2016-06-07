@@ -10,8 +10,14 @@ export default class ContentCtrl extends Controller {
     constructor() {
         super(...arguments);
 
-        this.helpers({
+        this.meh = "xyz";
 
+        this.subscribe("tamagotchi");
+
+        this.helpers({
+          tamagotchi() {
+            return Tamagotchi.find();
+          }
         });
     }
 }
