@@ -6,7 +6,7 @@ import {
     Meteor
 } from 'meteor/meteor';
 
-export default class ContentCtrl extends Controller {
+export default class SidemenuCtrl extends Controller {
     constructor() {
         super(...arguments);
 
@@ -16,4 +16,4 @@ export default class ContentCtrl extends Controller {
     }
 }
 
-ContentCtrl.$inject = ['$scope', '$state'];
+SidemenuCtrl.$inject = ['$scope', '$state'];

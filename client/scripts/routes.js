@@ -6,6 +6,8 @@ import {
 export class RoutesConfig extends Config {
     constructor() {
         super(...arguments);
+
+        this.isAuthorized = ['$auth', this.isAuthorized.bind(this)];
     }
 
     configure() {
@@ -13,24 +15,24 @@ export class RoutesConfig extends Config {
             .state('app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: 'client/components/sidemenu/sidemenu.html'
+                templateUrl: 'client/components/sidemenu/sidemenu.html',
+                controller: 'SidemenuCtrl as sidemenu'
             })
             .state('app.content', {
                 url: '/content',
                 views: {
                     'menu-content': {
                         templateUrl: 'client/components/content/content.html',
-                        controller: 'ContentCtrl as content',
+                        controller: 'ContentCtrl as content'
                     }
                 }
             });
 
-        this.$urlRouterProvider.otherwise('app/content');
+        this.$urlRouterProvider.otherwise('/app/content');
     }
 
     isAuthorized($auth) {
-        return true;
-        // return $auth.awaitUser();
+        return $auth.awaitUser();
     }
 }
 
@@ -40,7 +42,7 @@ export class RoutesRunner extends Runner {
             const err = _.last(args);
 
             if (err === 'AUTH_REQUIRED') {
-                this.$state.go('login');
+                this.$state.go('app.content');
             }
         });
     }

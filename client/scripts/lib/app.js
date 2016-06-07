@@ -1,14 +1,15 @@
 // Libs
+import { Meteor } from 'meteor/meteor';
+
 import angular from 'angular';
-import 'angular-animate';
 import 'angular-meteor';
-import 'angular-sanitize';
 import 'angular-ui-router';
-import 'ionic-scripts';
 
 // Modules
 import Definer from '../definer';
+import SidemenuCtrl from '../../components/sidemenu/sidemenu.controller';
 import ContentCtrl from '../../components/content/content.controller';
+
 import {
     RoutesConfig,
     RoutesRunner
@@ -17,10 +18,12 @@ import {
 // App
 const App = angular.module('App', [
     'angular-meteor',
+    'angular-meteor.auth',
     'ionic'
 ]);
 
 new Definer(App)
+    .define(SidemenuCtrl)
     .define(ContentCtrl)
     .define(RoutesConfig)
     .define(RoutesRunner);

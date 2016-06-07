@@ -10,8 +10,6 @@
       "angular-meteor": "^1.3.9",
       "angular-sanitize": "^1.5.3",
       "angular-ui-router": "^0.2.18",
-      "ionic-sdk": "https://github.com/driftyco/ionic",
-      "ionic-scripts": "https://github.com/DAB0mB/meteor-npm-ionic",
       "meteor-node-stubs": "~0.2.0",
       "moment": "^2.12.0"
     }

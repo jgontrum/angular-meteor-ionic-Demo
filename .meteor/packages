@@ -16,6 +16,8 @@ standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-dab0mb:ionic-assets
 angular-templates
 fourseven:scss
+driftyco:ionic
+reywood:publish-composite
+angular-meteor-auth
